@@ -6,7 +6,7 @@
 :root{
     --dark-blue: #222831;
     --light-blue: #30475e;
-    --grey: #393e46;
+    --grey: #393e46d1;
     --white: #ffffff;
 }
 
@@ -14,8 +14,8 @@ body {
     background-color: var(--dark-blue);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
     color: var(--white);
-    font-family: 'Roboto Mono', monospace;
     font-weight: 400;
 }
 
@@ -28,12 +28,14 @@ body {
 }
 
 .clock h1 {
+    font-family: 'Courgette', cursive;
     display: flex;
+    font-size: 36pt;
 }
 
 .categories {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 100px;
     width: 100%;
 }
@@ -45,6 +47,7 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .category a {
@@ -58,5 +61,5 @@ body {
 }
 
 .category li {
-    margin: 5px;
+    margin: 10px;
 }

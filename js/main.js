@@ -39,7 +39,7 @@ async function setBackgroundImage(image_url) {
 }
 
 async function getBackgroundImage() {
-	const url = "https://api.pexels.com/v1/search?query=wallpaper&per_page=10";
+	const url = "https://api.pexels.com/v1/search?query=nature&per_page=25";
 	const api_token =
 		"563492ad6f917000010000016829060a13e4449c835a48506319b68b";
 	try {
@@ -51,7 +51,7 @@ async function getBackgroundImage() {
 			},
 		});
 		const data = await promise.json();
-		let random = Math.floor(Math.random() * 10 + 0);
+		let random = Math.floor(Math.random() * 24 + 0);
 		const image_url = data["photos"][random]["src"]["landscape"];
 		await setBackgroundImage(image_url);
 	} catch {
@@ -67,4 +67,4 @@ function setIntervalAndExecute(fn, t) {
 	return setInterval(fn, t);
 }
 
-setIntervalAndExecute(getBackgroundImage, 60000);
+//setIntervalAndExecute(getBackgroundImage, 60000);
